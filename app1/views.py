@@ -7,3 +7,6 @@ def home(request):
 
 def add(request):
     return HttpResponse('5')
+
+def mul(request):
+    return HttpResponse('10')
