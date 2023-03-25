@@ -3,10 +3,16 @@ from django.http import HttpResponse
 # Create your views here.
 
 def home(request):
-    return HttpResponse('Hello World')
+    return render(request,'home.html',{'name':'Saini'})
 
 def add(request):
-    return HttpResponse('5')
+    val1=request.GET['num1']
+    val2=request.GET['num2']
+    res=int(val1)+int(val2)
+    return render(request,'result.html',{'result':res})
 
 def mul(request):
-    return HttpResponse('10')
+    val1=int(request.POST['num1'])
+    val2=int(request.POST['num2'])
+    res=(val1)*(val2)
+    return render(request,'result.html',{'result':res})
