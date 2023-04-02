@@ -49,3 +49,8 @@ def login(request):
 def logout(request):
     auth.logout(request)
     return redirect('/')
+
+def destinations(request):
+    return render(request,"destinations.html")
+def decision(request):
+    return render(request,"decision.html")
