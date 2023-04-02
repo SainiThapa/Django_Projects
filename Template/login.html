@@ -7,13 +7,19 @@
     <title>Login</title>
 </head>
 <body>
-    <form action="login" method="post">
-        {%csrf_token%}
-        <input type="text" name="username" placeholder="Username"> <br>
-        <input type="password" name="password" placeholder="Password"> <br>
-        <input type="submit">
-    </form>
-<div>
+    <p style="font-size: 25px; color: #5522ff">Enter your login credential here!</p>
+    <div style="font-size:20px; color: #0055ff;">
+        <form action="login" method="post">
+            {%csrf_token%}
+            Username <br>
+            <input type="text" name="username" placeholder="Username"> <br>
+            Password <br>
+            <input type="password" name="password" placeholder="Password"> <br>
+            <input type="submit">
+        </form>
+    </div>
+    <br>
+<div style="font-size:15px;">
     {% for message in messages%}
     <h3> {{message}} </h3>
     {% endfor %}
